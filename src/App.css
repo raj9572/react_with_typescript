@@ -36,3 +36,62 @@
     transform: rotate(360deg);
   }
 }
+
+
+.App_view{
+  margin: 20px;
+  
+}
+
+.Todo{
+  border: 2px dashed black;
+  width: fit-content;
+  padding: 20px;
+}
+
+.todoItems{
+  background-color: #61dafb;
+  padding: 8px 10px;
+  margin: 10px;
+  font-weight: 600;
+  border-radius: 10px;
+
+}
+
+.btn{
+  padding: 5px 8px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin: 5px;;;
+  background-color: #61dafb;
+
+  color: white;
+}
+
+.Counter{
+  text-align: center;
+  
+}
+
+.block{
+  height: 100px;
+  width: 100px;
+  border: 2px solid ;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 600;
+  
+}
+
+.board{
+  margin: 20px;
+}
+
+.row{
+  display: flex;
+ 
+
+}
