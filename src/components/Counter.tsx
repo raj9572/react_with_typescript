@@ -1,28 +1,23 @@
-import React, { useState,useEffect } from 'react'
+import React from 'react'
+import { useCounter } from '../provider/Counter'
 
-const Counter:React.FC = () => {
-    const [count, setCount] = useState<number>(0)
 
-    useEffect(()=>{
-        return function(){
-            console.log("unmounted counter")
-        }
-    },[])
-
-    const handleIncrement = () =>{
-        setCount(count+1)
-    }
-    const handleDecrement = () =>{
-        if(count === 0) return
-        setCount(count-1)
-    }
-  return (
-    <div className='Counter'>
-       <h1>{count}</h1>
-    <button className='btn' onClick={handleIncrement}>increment</button>
-    <button className='btn' onClick={handleDecrement}>decrement</button>
-    </div>
-  )
+interface MyCounterProps{
+    text:string
 }
 
-export default Counter
+
+const MyCounter:React.FC<MyCounterProps> = (props) => {
+
+ const context = useCounter()
+
+  return (
+     <>
+     <h1>{context?.value}</h1>
+     <button onClick={()=>context?.setCount(context?.value + 1)} className='btn'>{props.text}</button>
+     </>
+  )
+
+}
+
+export default MyCounter
