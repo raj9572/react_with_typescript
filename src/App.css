@@ -95,3 +95,17 @@
  
 
 }
+
+
+nav a{
+  text-decoration: none;
+}
+
+nav a:hover{
+  border-bottom:2px solid #999;
+}
+
+nav a.active{
+  color: #000;
+  border-bottom:2px solid #999;
+}

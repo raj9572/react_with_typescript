@@ -1,25 +1,24 @@
-import React, { } from 'react';
+import React from 'react';
 import './App.css';
-import MyButton from './components/Button';
-import CounterProvider from './provider/Counter';
-import MyCounter from './components/Counter';
-
+import AddToDo from './components/AddToDo';
+import Todos from './components/Todos';
+import Navbar from './components/Navbar';
+import { Routes } from 'react-router-dom';
 
 
 
 
 function App(){
 
-  return (
-    <div>
-      
 
-      
-       {/* <MyButton onClick={() => alert("click me")} text="click me"/> */}
-       {/* <MyButton text="click me" /> */}
-       <CounterProvider>
-          <MyCounter text="click me"/>
-       </CounterProvider>
+  
+
+  return (
+    <div  style={{textAlign:"center"}}>
+      <h1>Todo react + typescript</h1>
+      <Navbar/>
+      <AddToDo />
+      <Todos/>
     </div>
   );
 }
